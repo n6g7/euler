@@ -1,4 +1,4 @@
-from tools.primes import is_prime, prime_factors, prime_factors_dict
+from tools.primes import is_prime, prime_factors, prime_factors_dict, list_primes
 from types import GeneratorType
 import unittest
 
@@ -32,3 +32,11 @@ class TestPrimeFactorsDict(unittest.TestCase):
             2: 2,
             5: 1
         })
+
+class TestListPrimes(unittest.TestCase):
+
+    def test_generator(self):
+        iter = list_primes()
+        self.assertEqual(next(iter), 2)
+        self.assertEqual(next(iter), 3)
+        self.assertEqual(next(iter), 5)

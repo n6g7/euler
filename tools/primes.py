@@ -41,3 +41,13 @@ def prime_factors_dict(n):
             factors[f] = 1
 
     return factors
+
+def list_primes():
+    yield 2
+
+    n = 3
+    while True:
+        if is_prime(n):
+            yield n
+
+        n += 1
