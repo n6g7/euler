@@ -1,4 +1,4 @@
-def fib():
+def fibonacci():
     a = 1
     b = 1
     yield a
@@ -8,12 +8,18 @@ def fib():
         (a, b) = (b, a+b)
         yield b
 
-sum = 0
-for f in fib():
-    if f > 4000000:
-        break
+def sum_even_fibo(max):
+    sum = 0
 
-    if f % 2 == 0:
-        sum += f
+    for f in fibonacci():
+        if f > max:
+            break
 
-print(sum)
+        if f % 2 == 0:
+            sum += f
+
+    return sum
+
+if __name__ == '__main__':
+    n = 4000000
+    print(sum_even_fibo(n))

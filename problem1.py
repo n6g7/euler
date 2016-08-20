@@ -1,3 +1,8 @@
-multiples = set(range(0,1000,3)) | set(range(0,1000,5))
+def sum_multiples(max):
+    multiples = set(range(0, max, 3)) | set(range(0, max, 5))
 
-print(sum(multiples))
+    return sum(multiples)
+
+if __name__ == '__main__':
+    n = 1000
+    print(sum_multiples(n))
