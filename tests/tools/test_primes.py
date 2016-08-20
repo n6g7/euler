@@ -1,4 +1,4 @@
-from tools.primes import is_prime, prime_factors
+from tools.primes import is_prime, prime_factors, prime_factors_dict
 from types import GeneratorType
 import unittest
 
@@ -24,3 +24,11 @@ class TestPrimeFactors(unittest.TestCase):
 
     def test_reverse(self):
         self.assertEqual(list(prime_factors(20, reverse=True)), [5, 2, 2])
+
+class TestPrimeFactorsDict(unittest.TestCase):
+
+    def test_dict(self):
+        self.assertEqual(prime_factors_dict(20), {
+            2: 2,
+            5: 1
+        })

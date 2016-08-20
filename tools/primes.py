@@ -31,3 +31,13 @@ def prime_factors(n, reverse=False):
 
             return
     yield n
+
+def prime_factors_dict(n):
+    factors = {}
+    for f in prime_factors(n):
+        if f in factors:
+            factors[f] += 1
+        else:
+            factors[f] = 1
+
+    return factors
