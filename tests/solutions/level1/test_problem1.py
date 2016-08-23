@@ -1,4 +1,4 @@
-from problem1 import sum_multiples
+from solutions.level1.problem1 import sum_multiples
 import unittest
 
 class TestProblem1(unittest.TestCase):

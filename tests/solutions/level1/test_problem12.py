@@ -1,4 +1,4 @@
-from problem12 import triangle_numbers_divisors
+from solutions.level1.problem12 import triangle_numbers_divisors
 import unittest
 
 class TestProblem12(unittest.TestCase):

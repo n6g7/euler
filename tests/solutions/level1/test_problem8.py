@@ -1,4 +1,4 @@
-from problem8 import greatest_product
+from solutions.level1.problem8 import greatest_product
 import unittest
 
 class TestProblem8(unittest.TestCase):

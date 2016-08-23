@@ -1,4 +1,4 @@
-from problem11 import greatest_diagonal_product
+from solutions.level1.problem11 import greatest_diagonal_product
 import unittest
 
 class TestProblem11(unittest.TestCase):

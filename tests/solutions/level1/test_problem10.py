@@ -1,4 +1,4 @@
-from problem10 import sum_primes
+from solutions.level1.problem10 import sum_primes
 import unittest
 
 class TestProblem10(unittest.TestCase):

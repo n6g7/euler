@@ -1,4 +1,4 @@
-from problem13 import first_digits_of_sum
+from solutions.level1.problem13 import first_digits_of_sum
 import unittest
 
 class TestProblem13(unittest.TestCase):

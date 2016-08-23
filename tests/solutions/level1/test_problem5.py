@@ -1,4 +1,4 @@
-from problem5 import smallest_multiple
+from solutions.level1.problem5 import smallest_multiple
 import unittest
 
 class TestProblem5(unittest.TestCase):
