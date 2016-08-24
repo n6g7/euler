@@ -1,10 +1,7 @@
-def power_digit_sum(n):
-    p = 2 ** n
+from tools.digit_sum import digit_sum
 
-    s = 0
-    for i in str(p):
-        s += int(i)
-    return s
+def power_digit_sum(n):
+    return digit_sum(2 ** n)
 
 def run():
     return power_digit_sum(1000)
