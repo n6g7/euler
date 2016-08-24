@@ -6,5 +6,5 @@ def brute(sum):
             if (a ** 2 + b ** 2) == c ** 2:
                 return a*b*c
 
-if __name__ == '__main__':
-    print(brute(1000))
+def run():
+    return brute(1000)

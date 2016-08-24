@@ -39,5 +39,5 @@ def diagonal_products(length):
 def greatest_diagonal_product(length):
     return max(diagonal_products(length))
 
-if __name__ == '__main__':
-    print(greatest_diagonal_product(4))
+def run():
+    return greatest_diagonal_product(4)

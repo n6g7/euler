@@ -4,5 +4,5 @@ def squares_difference(n):
 
     return squares_difference(n-1) + 2*n*sum(range(1, n))
 
-if __name__ == '__main__':
-    print(squares_difference(100))
+def run():
+    return squares_difference(100)

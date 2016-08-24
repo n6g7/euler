@@ -8,5 +8,5 @@ def nth_prime(n):
         if counter == n:
             return x
 
-if __name__ == '__main__':
-    print(nth_prime(10001))
+def run():
+    return nth_prime(10001)

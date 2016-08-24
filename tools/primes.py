@@ -50,4 +50,4 @@ def list_primes():
         if is_prime(n):
             yield n
 
-        n += 1
+        n += 2

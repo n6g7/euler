@@ -10,5 +10,5 @@ def longest_collatz_sequence(n):
             result = i
     return result
 
-if __name__ == '__main__':
-    print(longest_collatz_sequence(1000000))
+def run():
+    return longest_collatz_sequence(1000000)

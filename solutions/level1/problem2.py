@@ -20,6 +20,5 @@ def sum_even_fibo(max):
 
     return sum
 
-if __name__ == '__main__':
-    n = 4000000
-    print(sum_even_fibo(n))
+def run():
+    return sum_even_fibo(4000000)

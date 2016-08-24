@@ -104,5 +104,5 @@ numbers = [
 def first_digits_of_sum(digits):
     return str(sum(numbers))[:digits]
 
-if __name__ == '__main__':
-    print(first_digits_of_sum(10))
+def run():
+    return first_digits_of_sum(10)

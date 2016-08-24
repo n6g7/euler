@@ -7,5 +7,5 @@ def number_letter_counts(max):
         s += len(word.replace(' ', ''))
     return s
 
-if __name__ == '__main__':
-    print(number_letter_counts(1000))
+def run():
+    return number_letter_counts(1000)

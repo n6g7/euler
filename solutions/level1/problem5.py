@@ -1,4 +1,3 @@
-# import math
 from tools.primes import prime_factors_dict
 
 def smallest_multiple(n):
@@ -18,5 +17,5 @@ def smallest_multiple(n):
 
     return r
 
-if __name__ == '__main__':
-    print(smallest_multiple(20))
+def run():
+    return smallest_multiple(20)

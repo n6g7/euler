@@ -6,5 +6,5 @@ def triangle_numbers_divisors(number_divisors):
         if count_divisors(n) > number_divisors:
             return n
 
-if __name__ == '__main__':
-    print(triangle_numbers_divisors(500))
+def run():
+    return triangle_numbers_divisors(500)

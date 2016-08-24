@@ -1,5 +1,3 @@
-import math
-
 def is_palindrome(n):
     s = str(n)
     return s[::-1] == s
@@ -14,5 +12,5 @@ def palindromes(max):
 def largest_palindrome_by_magnitude(n):
     return max([r for r in palindromes(10 ** n)])
 
-if __name__ == '__main__':
-    print(largest_palindrome_by_magnitude(3))
+def run():
+    return largest_palindrome_by_magnitude(3)

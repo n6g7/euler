@@ -3,6 +3,5 @@ def sum_multiples(max):
 
     return sum(multiples)
 
-if __name__ == '__main__':
-    n = 1000
-    print(sum_multiples(n))
+def run():
+    return sum_multiples(1000)

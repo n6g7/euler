@@ -14,5 +14,5 @@ def lattice_paths(n, m):
 
     return cache[a][b]
 
-if __name__ == '__main__':
-    print(lattice_paths(20, 20))
+def run():
+    return lattice_paths(20, 20)
