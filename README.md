@@ -6,6 +6,7 @@ Solutions to [Project Euler](https://projecteuler.net) problems.
 
   - install? `pip install -r requirements.txt`
   - run? `./run.py <n>`
+  - time? `./time.py`
   - test? `green`
 
 ## Todo
