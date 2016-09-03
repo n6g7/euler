@@ -7,10 +7,10 @@ def get_amicables(max):
         if i in amicables:
             continue
 
-        d = sum_divisors(i)
+        d = sum_divisors(i, proper=True)
 
         if d > i:
-            j = sum_divisors(d)
+            j = sum_divisors(d, proper=True)
             if j == i:
                 amicables.append(i)
                 amicables.append(d)
