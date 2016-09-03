@@ -2,6 +2,8 @@
 
 Solutions to [Project Euler](https://projecteuler.net) problems.
 
+![Project Euler badge](https://projecteuler.net/profile/n6g7.png)
+
 ## How to?
 
   - install? `pip install -r requirements.txt`
