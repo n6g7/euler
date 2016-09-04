@@ -1,8 +1,8 @@
 import math
-from tools.digit_sum import digit_sum
+from tools.digits import sum_digits
 
 def factorial_digit_sum(n):
-    return digit_sum(math.factorial(n))
+    return sum_digits(math.factorial(n))
 
 def run():
     return factorial_digit_sum(100)
