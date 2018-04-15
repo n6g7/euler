@@ -3,5 +3,6 @@ def sum_multiples(max):
 
     return sum(multiples)
 
+
 def run():
     return sum_multiples(1000)

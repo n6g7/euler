@@ -1,6 +1,7 @@
 from tools.int_to_words import int2word
 import unittest
 
+
 class TestIntToWord(unittest.TestCase):
 
     def test_simple(self):

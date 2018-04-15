@@ -1,6 +1,12 @@
-from tools.primes import is_prime, prime_factors, prime_factors_dict, list_primes
+from tools.primes import (
+    is_prime,
+    list_primes,
+    prime_factors,
+    prime_factors_dict
+)
 from types import GeneratorType
 import unittest
+
 
 class TestIsPrime(unittest.TestCase):
 
@@ -14,6 +20,7 @@ class TestIsPrime(unittest.TestCase):
         for n in not_primes:
             self.assertFalse(is_prime(n))
 
+
 class TestPrimeFactors(unittest.TestCase):
 
     def test_generator(self):
@@ -25,6 +32,7 @@ class TestPrimeFactors(unittest.TestCase):
     def test_reverse(self):
         self.assertEqual(list(prime_factors(20, reverse=True)), [5, 2, 2])
 
+
 class TestPrimeFactorsDict(unittest.TestCase):
 
     def test_dict(self):
@@ -32,6 +40,7 @@ class TestPrimeFactorsDict(unittest.TestCase):
             2: 2,
             5: 1
         })
+
 
 class TestListPrimes(unittest.TestCase):
 

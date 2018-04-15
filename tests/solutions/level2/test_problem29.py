@@ -1,6 +1,7 @@
 from solutions.level2.problem29 import distinct_powers
 import unittest
 
+
 class TestProblem29(unittest.TestCase):
 
     def test_example(self):

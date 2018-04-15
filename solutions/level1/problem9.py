@@ -6,5 +6,6 @@ def brute(sum):
             if (a ** 2 + b ** 2) == c ** 2:
                 return a*b*c
 
+
 def run():
     return brute(1000)

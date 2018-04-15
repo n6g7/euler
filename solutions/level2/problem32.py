@@ -1,6 +1,7 @@
 import math
 from tools.digits import get_digits
 
+
 def different_digits(*args, **kwargs):
     digits = set(range(1, 10))
     for n in args:
@@ -9,6 +10,7 @@ def different_digits(*args, **kwargs):
                 return False
             digits.remove(d)
     return len(digits) == 0 if 'all' in kwargs and kwargs['all'] else True
+
 
 def pandigital_products():
     digits = 9
@@ -33,6 +35,7 @@ def pandigital_products():
                 solutions.add(c)
 
     return sum(solutions)
+
 
 def run():
     return pandigital_products()

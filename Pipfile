@@ -8,10 +8,12 @@ name = "pypi"
 [packages]
 
 
+
 [dev-packages]
 
 green = "*"
 "flake8" = "*"
+"autopep8" = "*"
 
 
 [requires]

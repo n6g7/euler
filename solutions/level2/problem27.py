@@ -1,10 +1,12 @@
 from tools.primes import is_prime, list_primes
 
+
 def quadratic_score(a, b):
     n = 0
     while is_prime((n**2) + (a*n) + b):
         n += 1
     return n
+
 
 def quadratic_primes(limit):
     # (Case n=0) b has to be prime.
@@ -30,6 +32,7 @@ def quadratic_primes(limit):
                 max_primes = score
 
     return max_couple[0] * max_couple[1]
+
 
 def run():
     return quadratic_primes(1000)

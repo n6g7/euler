@@ -1,5 +1,6 @@
 cache = {}
 
+
 def lattice_paths(n, m):
     a = min(n, m)
     b = max(n, m)
@@ -13,6 +14,7 @@ def lattice_paths(n, m):
         cache[a][b] = lattice_paths(a-1, b) + lattice_paths(a, b-1)
 
     return cache[a][b]
+
 
 def run():
     return lattice_paths(20, 20)

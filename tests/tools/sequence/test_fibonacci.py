@@ -1,6 +1,7 @@
 from tools.sequence.fibonacci import fibonacci
 import unittest
 
+
 class TestFibonacci(unittest.TestCase):
 
     def test_generator(self):

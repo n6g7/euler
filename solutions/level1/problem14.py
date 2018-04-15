@@ -1,5 +1,6 @@
 from tools.collatz import collatz_length
 
+
 def longest_collatz_sequence(n):
     max = 1
     result = 1
@@ -9,6 +10,7 @@ def longest_collatz_sequence(n):
             max = length
             result = i
     return result
+
 
 def run():
     return longest_collatz_sequence(1000000)

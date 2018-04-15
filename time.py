@@ -4,10 +4,12 @@ from time import time
 
 MAX_LINE = 15
 
+
 def time_solution(n):
     start = time()
     run_problem(n)
     return time() - start
+
 
 def format_line(n, t):
     head = ('Problem %s:' % n).ljust(11)
@@ -25,6 +27,7 @@ def format_line(n, t):
 
     return '%s %s %s' % (head, tt, line)
 
+
 def time_solutions():
     start = time()
     n = 1
@@ -34,6 +37,7 @@ def time_solutions():
 
     duration = time() - start
     print('%s problems solved in %s seconds' % (n-1, round(duration, 1)))
+
 
 if __name__ == '__main__':
     from argparse import ArgumentParser

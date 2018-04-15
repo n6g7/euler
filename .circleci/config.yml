@@ -19,5 +19,9 @@ jobs:
           command: pipenv install --system --dev
 
       - run:
+          name: Lint
+          command: flake8 .
+
+      - run:
           name: Run tests
           command: green

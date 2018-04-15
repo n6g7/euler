@@ -1,6 +1,7 @@
 from tools.fraction import decimal_expansion, recurring_cycle
 import unittest
 
+
 class TestDecimalExpansion(unittest.TestCase):
 
     def test_simple(self):
@@ -14,6 +15,7 @@ class TestDecimalExpansion(unittest.TestCase):
         self.assertEqual(decimal_expansion(8), (3, 0))
         self.assertEqual(decimal_expansion(9), (0, 1))
         self.assertEqual(decimal_expansion(10), (1, 0))
+
 
 class TestRecurringCycle(unittest.TestCase):
 

@@ -1,6 +1,7 @@
 from solutions.level1.problem4 import largest_palindrome_by_magnitude
 import unittest
 
+
 class TestProblem4(unittest.TestCase):
 
     def test_example(self):

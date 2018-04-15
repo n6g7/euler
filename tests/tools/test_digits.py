@@ -1,6 +1,7 @@
 from tools.digits import get_digits, sum_digits
 import unittest
 
+
 class TestGetDigits(unittest.TestCase):
 
     def test_simple(self):
@@ -14,6 +15,7 @@ class TestGetDigits(unittest.TestCase):
         self.assertEqual(next(iter), 9)
         self.assertEqual(next(iter), 9)
         self.assertRaises(StopIteration, lambda: next(iter))
+
 
 class TestSumDigits(unittest.TestCase):
 

@@ -1,6 +1,7 @@
 from tools.sequence.triangle_numbers import triangle_numbers
 import unittest
 
+
 class TestTriangleNumbers(unittest.TestCase):
 
     def test_generator(self):

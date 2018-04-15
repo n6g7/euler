@@ -101,8 +101,10 @@ numbers = [
     53503534226472524250874054075591789781264330331690
 ]
 
+
 def first_digits_of_sum(digits):
     return str(sum(numbers))[:digits]
+
 
 def run():
     return first_digits_of_sum(10)

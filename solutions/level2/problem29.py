@@ -6,5 +6,6 @@ def distinct_powers(limit):
 
     return len(terms)
 
+
 def run():
     return distinct_powers(100)

@@ -1,6 +1,7 @@
 from solutions.level1.problem25 import n_digit_fib
 import unittest
 
+
 class TestProblem25(unittest.TestCase):
 
     def test_example(self):

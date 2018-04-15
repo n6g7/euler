@@ -1,7 +1,6 @@
-from tools.digits import sum_digits
-
 def coin_sums(sum, coins):
     cache = {}
+
     def combinations(target, max_coin):
         if (target, max_coin) not in cache:
             if target == 0:
@@ -20,6 +19,7 @@ def coin_sums(sum, coins):
         return cache[(target, max_coin)]
 
     return combinations(sum, max(coins))
+
 
 def run():
     return coin_sums(200, [1, 2, 5, 10, 20, 50, 100, 200])

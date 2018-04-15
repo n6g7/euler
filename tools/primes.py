@@ -1,5 +1,6 @@
 import math
 
+
 def is_prime(n):
     if n < 2:
         return False
@@ -10,16 +11,17 @@ def is_prime(n):
 
     root = math.floor(math.sqrt(n))
 
-    for x in range(3, root+1, 2):
+    for x in range(3, root + 1, 2):
         if n % x == 0:
             return False
 
     return True
 
+
 def prime_factors(n, reverse=False):
     root = math.floor(math.sqrt(n))
 
-    for x in range(2, root+1):
+    for x in range(2, root + 1):
         if n % x == 0 and is_prime(x):
 
             if not reverse:
@@ -32,6 +34,7 @@ def prime_factors(n, reverse=False):
             return
     yield n
 
+
 def prime_factors_dict(n):
     factors = {}
     for f in prime_factors(n):
@@ -41,6 +44,7 @@ def prime_factors_dict(n):
             factors[f] = 1
 
     return factors
+
 
 def list_primes():
     yield 2

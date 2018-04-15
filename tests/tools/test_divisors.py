@@ -1,5 +1,13 @@
-from tools.divisors import count_divisors, get_divisors, sum_divisors, is_perfect, is_deficient, is_abundant
+from tools.divisors import (
+    count_divisors,
+    get_divisors,
+    is_abundant,
+    is_deficient,
+    is_perfect,
+    sum_divisors
+)
 import unittest
+
 
 class TestCountDivisors(unittest.TestCase):
 
@@ -10,6 +18,7 @@ class TestCountDivisors(unittest.TestCase):
         self.assertEqual(count_divisors(4), 3)
         self.assertEqual(count_divisors(5), 2)
         self.assertEqual(count_divisors(18), 6)
+
 
 class TestGetDivisors(unittest.TestCase):
 
@@ -34,6 +43,7 @@ class TestGetDivisors(unittest.TestCase):
         self.assertEqual(next(iter), 5)
         self.assertRaises(StopIteration, lambda: next(iter))
 
+
 class TestSumDivisors(unittest.TestCase):
 
     def test_simple(self):
@@ -43,6 +53,7 @@ class TestSumDivisors(unittest.TestCase):
     def test_proper(self):
         self.assertEqual(sum_divisors(220, True), 284)
         self.assertEqual(sum_divisors(284, True), 220)
+
 
 class TestIsPerfect(unittest.TestCase):
 
@@ -55,20 +66,22 @@ class TestIsPerfect(unittest.TestCase):
         self.assertTrue(is_perfect(8128))
         self.assertTrue(is_perfect(33550336))
 
+
 class TestIsDeficient(unittest.TestCase):
 
     def test_below_twenty(self):
-        for n in [1,2,3,4,5,7,8,9,10,11,13,14,15,16,17,19]:
+        for n in [1, 2, 3, 4, 5, 7, 8, 9, 10, 11, 13, 14, 15, 16, 17, 19]:
             self.assertTrue(is_deficient(n))
 
     def test_more_cases(self):
         self.assertTrue(is_deficient(49))
         self.assertTrue(is_deficient(50))
 
+
 class TestIsAbundant(unittest.TestCase):
 
     def test_below_twenty(self):
-        for n in [12,18,20]:
+        for n in [12, 18, 20]:
             self.assertTrue(is_abundant(n))
 
     def test_more_cases(self):

@@ -26,6 +26,7 @@ problem_pyramid = [
     [4, 62, 98, 27, 23, 9, 70, 98, 73, 93, 38, 53, 60, 4, 23]
 ]
 
+
 class TestProblem18(unittest.TestCase):
 
     def test_example(self):

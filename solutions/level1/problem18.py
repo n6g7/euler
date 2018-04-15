@@ -1,5 +1,6 @@
 from tools.maximum_path import maximum_path_pyramid
 
+
 def run():
     input = """75
     95 64
@@ -17,6 +18,9 @@ def run():
     63 66 04 68 89 53 67 30 73 16 69 87 40 31
     04 62 98 27 23 09 70 98 73 93 38 53 60 04 23"""
 
-    pyramid = [[int(n) for n in line.strip().split(' ')] for line in input.split('\n')]
+    pyramid = [
+        [int(n) for n in line.strip().split(' ')]
+        for line in input.split('\n')
+    ]
 
     return maximum_path_pyramid(pyramid)

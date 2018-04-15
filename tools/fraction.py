@@ -8,10 +8,11 @@ def decimal_expansion(d):
             return (len(mods), 0)
         elif mod in mods:
             s = mods.index(mod)
-            return (s, len(mods)-s)
+            return (s, len(mods) - s)
         else:
             mods.append(mod)
             e += 1
+
 
 def recurring_cycle(d):
     return decimal_expansion(d)[1]

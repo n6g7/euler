@@ -1,5 +1,6 @@
 from tools.divisors import sum_divisors
 
+
 def get_amicables(max):
     amicables = []
 
@@ -16,8 +17,10 @@ def get_amicables(max):
                 amicables.append(d)
     return amicables
 
+
 def sum_amicables(max):
     return sum(get_amicables(max))
+
 
 def run():
     return sum_amicables(10000)

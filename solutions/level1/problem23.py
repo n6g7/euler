@@ -2,8 +2,10 @@ from tools.divisors import is_abundant
 
 limit = 28123
 
+
 def get_abundants(max):
     return frozenset(filter(is_abundant, range(max)))
+
 
 def non_abundant_sums(limit):
     abundants = get_abundants(limit)
@@ -13,10 +15,11 @@ def non_abundant_sums(limit):
         for j in abundants:
             try:
                 candidates.remove(i+j)
-            except:
+            except Exception:
                 pass
 
     return sum(candidates)
+
 
 def run():
     return non_abundant_sums(limit)

@@ -24,6 +24,7 @@ data = [[int(n) for n in line.split(' ')] for line in data_string.split("\n")]
 X = len(data)
 Y = len(data[0])
 
+
 def diagonal_products(length):
     for i in range(X-length+1):
         for j in range(Y-length+1):
@@ -34,10 +35,17 @@ def diagonal_products(length):
             # Diagonally 1
             yield data[i][j] * data[i+1][j+1] * data[i+2][j+2] * data[i+3][j+3]
             # Diagonally 2
-            yield data[i][j+length-1] * data[i+1][j+length-2] * data[i+2][j+length-3] * data[i+3][j+length-4]
+            yield (
+                data[i][j+length-1]
+                * data[i+1][j+length-2]
+                * data[i+2][j+length-3]
+                * data[i+3][j+length-4]
+            )
+
 
 def greatest_diagonal_product(length):
     return max(diagonal_products(length))
+
 
 def run():
     return greatest_diagonal_product(4)

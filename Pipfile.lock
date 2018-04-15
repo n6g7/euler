@@ -1,7 +1,7 @@
 {
     "_meta": {
         "hash": {
-            "sha256": "d5dbf985cdf004b9d571efe2e3466bb4917ad4f1207bc55ef2af5d91f8348ed3"
+            "sha256": "cef352d5c1cbbd154b7bc3c90a14f344f7e516b1a3fc48dcd3c8989634101b6e"
         },
         "host-environment-markers": {
             "implementation_name": "cpython",
@@ -28,36 +28,14 @@
             }
         ]
     },
-    "default": {
-        "colorama": {
-            "hashes": [
-                "sha256:463f8483208e921368c9f306094eb6f725c6ca42b0f97e313cb5d5512459feda",
-                "sha256:48eb22f4f8461b1df5734a074b57042430fb06e1d61bd1e11b078c0fe6d7a1f1"
-            ],
-            "version": "==0.3.9"
-        },
-        "green": {
-            "hashes": [
-                "sha256:f80c3a6914f0a5c0e246012eecd8c294bdc78ae1a2219695a5a5ca0fd05cc8d5"
-            ],
-            "version": "==2.5.1"
-        },
-        "python-termstyle": {
-            "hashes": [
-                "sha256:f42a6bb16fbfc5e2c66d553e7ad46524ea833872f75ee5d827c15115fafc94e2",
-                "sha256:6faf42ba42f2826c38cf70dacb3ac51f248a418e48afc0e36593df11cf3ab1d2"
-            ],
-            "version": "==0.1.10"
-        },
-        "unidecode": {
-            "hashes": [
-                "sha256:72f49d3729f3d8f5799f710b97c1451c5163102e76d64d20e170aedbbd923582",
-                "sha256:8c33dd588e0c9bc22a76eaa0c715a5434851f726131bd44a6c26471746efabf5"
-            ],
-            "version": "==1.0.22"
-        }
-    },
+    "default": {},
     "develop": {
+        "autopep8": {
+            "hashes": [
+                "sha256:2284d4ae2052fedb9f466c09728e30d2e231cfded5ffd7b1a20c34123fdc4ba4"
+            ],
+            "version": "==1.3.5"
+        },
         "colorama": {
             "hashes": [
                 "sha256:463f8483208e921368c9f306094eb6f725c6ca42b0f97e313cb5d5512459feda",

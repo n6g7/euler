@@ -1,6 +1,7 @@
 from solutions.level1.problem15 import lattice_paths
 import unittest
 
+
 class TestProblem15(unittest.TestCase):
 
     def test_example(self):

@@ -4,9 +4,12 @@ def collatz_next(n):
     else:
         return 3 * n + 1
 
+
 collatz_lengths = {
     1: 1
 }
+
+
 def collatz_length(n):
     if n not in collatz_lengths:
         collatz_lengths[n] = 1 + collatz_length(collatz_next(n))

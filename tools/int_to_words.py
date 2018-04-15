@@ -1,13 +1,14 @@
-ones = ["", "one ","two ","three ","four ", "five ",
-    "six ","seven ","eight ","nine "]
+ones = ["", "one ", "two ", "three ", "four ", "five ",
+        "six ", "seven ", "eight ", "nine "]
 
-tens = ["ten ","eleven ","twelve ","thirteen ", "fourteen ",
-    "fifteen ","sixteen ","seventeen ","eighteen ","nineteen "]
+tens = ["ten ", "eleven ", "twelve ", "thirteen ", "fourteen ",
+        "fifteen ", "sixteen ", "seventeen ", "eighteen ", "nineteen "]
 
-twenties = ["","","twenty ","thirty ","forty ",
-    "fifty ","sixty ","seventy ","eighty ","ninety "]
+twenties = ["", "", "twenty ", "thirty ", "forty ",
+            "fifty ", "sixty ", "seventy ", "eighty ", "ninety "]
 
-thousands = ["","thousand "]
+thousands = ["", "thousand "]
+
 
 def int2word(n):
     groups = []
@@ -20,7 +21,7 @@ def int2word(n):
         if q < -2:
             break
         else:
-            if  q >= 0:
+            if q >= 0:
                 groups.append(int(r[:3]))
             elif q >= -1:
                 groups.append(int(r[:2]))

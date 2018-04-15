@@ -1,5 +1,6 @@
 from tools.primes import prime_factors_dict
 
+
 def smallest_multiple(n):
     result_factors = {}
 
@@ -16,6 +17,7 @@ def smallest_multiple(n):
         r *= key ** result_factors[key]
 
     return r
+
 
 def run():
     return smallest_multiple(20)

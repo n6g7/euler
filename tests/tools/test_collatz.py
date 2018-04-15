@@ -1,6 +1,7 @@
 from tools.collatz import collatz_next, collatz_length
 import unittest
 
+
 class TestCollatzNext(unittest.TestCase):
 
     def test_simple(self):
@@ -10,6 +11,7 @@ class TestCollatzNext(unittest.TestCase):
         self.assertEqual(collatz_next(4), 2)
         self.assertEqual(collatz_next(5), 16)
         self.assertEqual(collatz_next(18), 9)
+
 
 class TestCollatzLength(unittest.TestCase):
 

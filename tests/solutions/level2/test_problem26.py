@@ -1,6 +1,7 @@
 from solutions.level2.problem26 import longest_recurring_cycle
 import unittest
 
+
 class TestProblem26(unittest.TestCase):
 
     def test_example(self):

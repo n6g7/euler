@@ -1,5 +1,6 @@
 import math
 
+
 def nth_lexicographic_permutation(digits, n):
     digits.sort()
     size = len(digits)
@@ -12,7 +13,11 @@ def nth_lexicographic_permutation(digits, n):
     first_digit = digits[idx]
     digits.remove(first_digit)
 
-    return first_digit * 10 ** (size-1) + nth_lexicographic_permutation(digits, n - idx * sub_perms)
+    return first_digit * 10 ** (size-1) + nth_lexicographic_permutation(
+        digits,
+        n - idx * sub_perms
+    )
+
 
 def run():
     return nth_lexicographic_permutation(
