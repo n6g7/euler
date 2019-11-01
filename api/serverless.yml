@@ -1,0 +1,39 @@
+service: euler
+
+provider:
+  name: aws
+  runtime: python3.7
+  profile: euler
+  stage: prod
+  region: eu-west-2
+  timeout: 20
+  memorySize: 128
+  environment:
+    PYTHONPATH: /opt
+
+functions:
+  solve:
+    handler: handler.solve
+    events:
+      - http:
+          path: problems/{number}
+          method: get
+          cors: true
+          request:
+            parameters:
+              paths:
+                number: true
+    layers:
+      - { Ref: SourceLambdaLayer }
+
+layers:
+  source:
+    name: euler-source-${self:provider.stage}
+    path: ../
+    package:
+      exclude:
+        - '**'
+      include:
+        - cli/**
+        - solutions/**
+        - tools/**
