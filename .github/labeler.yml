@@ -1,0 +1,40 @@
+Front:
+  - front/**/*
+
+CLI:
+  - startproject/cli/**/*
+
+Django:
+  - startproject/django/**/*
+
+Elastic Beanstalk:
+  - startproject/elastic-beanstalk/**/*
+
+Generator:
+  - startproject/generator/**/*
+
+NestJS:
+  - startproject/nest/**/*
+
+Next:
+  - startproject/next/**/*
+
+Nuxt:
+  - startproject/nuxt/**/*
+
+React Native:
+  - startproject/react-native/**/*
+
+React:
+  - sstartproject/react/**/*
+
+Root:
+  - startproject/root/**/*
+
+S3:
+  - startproject/s3/**/*
+
+Serverless:
+  - startproject/serverless/**/*
+
+

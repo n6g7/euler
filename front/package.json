@@ -1,0 +1,25 @@
+{
+  "name": "euler",
+  "version": "0.1.0",
+  "main": "index.js",
+  "author": "Nathan Gaberel <nathan@gnab.fr>",
+  "license": "MIT",
+  "scripts": {
+    "dev": "next",
+    "build": "next build",
+    "start": "next start"
+  },
+  "dependencies": {
+    "lodash": "^4.17.15",
+    "next": "^9.1.2",
+    "react": "^16.11.0",
+    "react-dom": "^16.11.0",
+    "styled-components": "^4.4.0"
+  },
+  "devDependencies": {
+    "@types/node": "^12.11.7",
+    "@types/react": "^16.9.11",
+    "babel-plugin-styled-components": "^1.10.6",
+    "typescript": "^3.6.4"
+  }
+}
