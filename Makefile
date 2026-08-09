@@ -13,10 +13,14 @@ test-go:
 	fi
 
 test-rust:
-	@if [ -f Cargo.toml ]; then \
+	@if find solutions -name '*.rs' -print -quit | grep -q .; then \
+		python3 -c "from cli.run import _sync_cargo_toml; \
+			import glob, os; \
+			[_sync_cargo_toml(f) for f in \
+			glob.glob('solutions/level*/problem*.rs')]" && \
 		cargo test; \
 	else \
-		echo "test-rust: no Cargo.toml found, skipping"; \
+		echo "test-rust: no Rust solutions found, skipping"; \
 	fi
 
 lint:

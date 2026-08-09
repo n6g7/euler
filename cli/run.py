@@ -74,6 +74,10 @@ class Rust(CompiledLanguage):
     def compile_cmd(self, source: str, binary: str) -> list:
         return ['rustc', source, '-o', binary]
 
+    def prepare(self, source: str) -> None:
+        _sync_cargo_toml(source)
+        super().prepare(source)
+
 
 _BY_EXT = {
     ext: lang()
@@ -86,6 +90,31 @@ def _level(n):
     return math.ceil(n / PROBLEMS_PER_LEVEL)
 
 
+def _sync_cargo_toml(source):
+    cargo_path = os.path.join(PROJECT_ROOT, 'Cargo.toml')
+    name = os.path.splitext(os.path.basename(source))[0]
+    try:
+        with open(cargo_path) as f:
+            if name in f.read():
+                return
+    except FileNotFoundError:
+        pass
+    import glob
+    rs_files = sorted(glob.glob(
+        os.path.join(PROJECT_ROOT, 'solutions', 'level*', 'problem*.rs')
+    ))
+    lines = [
+        '# Auto-generated — do not edit\n',
+        '[package]\nname = "euler"\nversion = "0.1.0"\nedition = "2021"\n',
+    ]
+    for path in rs_files:
+        n = os.path.splitext(os.path.basename(path))[0]
+        rel = os.path.relpath(path, PROJECT_ROOT)
+        lines.append(f'\n[[bin]]\nname = "{n}"\npath = "{rel}"\n')
+    with open(cargo_path, 'w') as f:
+        f.writelines(lines)
+
+
 def _find_source(n):
     level_dir = os.path.join(PROJECT_ROOT, 'solutions', f'level{_level(n)}')
     if not os.path.isdir(level_dir):
@@ -93,7 +122,7 @@ def _find_source(n):
     for entry in os.listdir(level_dir):
         name, ext = os.path.splitext(entry)
         if name == f'problem{n}' and ext in _BY_EXT:
-            return os.path.join(level_dir, entry), ext
+            return os.path.join(level_dir, entry), _BY_EXT[ext]
     return None, None
 
 
@@ -120,10 +149,9 @@ def problem_exists(n):
 
 
 def run_problem(n):
-    source, ext = _find_source(n)
+    source, lang = _find_source(n)
     if source is None:
         raise FileNotFoundError(f'No solution for problem {n}')
-    lang = _BY_EXT[ext]
     lang.prepare(source)
     start = perf_counter()
     answer = lang.run(source)

@@ -2,3 +2,6 @@
 __pycache__
 venv
 build/
+target/
+Cargo.toml
+Cargo.lock
