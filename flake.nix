@@ -16,6 +16,8 @@
               flake8
               autopep8
             ]))
+            pkgs.rustc
+            pkgs.cargo
           ];
         };
       });

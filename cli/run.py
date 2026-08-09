@@ -22,6 +22,8 @@ def _exec(cmd, env=None):
 class Language(ABC):
     extensions: tuple
 
+    def prepare(self, source: str) -> None: ...
+
     @abstractmethod
     def run(self, source: str) -> str: ...
 
@@ -30,9 +32,12 @@ class CompiledLanguage(Language, ABC):
     @abstractmethod
     def compile_cmd(self, source: str, binary: str) -> list: ...
 
-    def run(self, source: str) -> str:
+    def _binary(self, source: str) -> str:
         name = os.path.splitext(os.path.basename(source))[0]
-        binary = os.path.join(BUILD_DIR, name)
+        return os.path.join(BUILD_DIR, name)
+
+    def prepare(self, source: str) -> None:
+        binary = self._binary(source)
         stale = not os.path.exists(binary) or \
             os.path.getmtime(binary) <= os.path.getmtime(source)
         if stale:
@@ -43,7 +48,9 @@ class CompiledLanguage(Language, ABC):
             )
             if result.returncode != 0:
                 raise RuntimeError(f'Compilation failed:\n{result.stderr}')
-        return _exec([binary])
+
+    def run(self, source: str) -> str:
+        return _exec([self._binary(source)])
 
 
 class Python(Language):
@@ -116,6 +123,8 @@ def run_problem(n):
     source, ext = _find_source(n)
     if source is None:
         raise FileNotFoundError(f'No solution for problem {n}')
+    lang = _BY_EXT[ext]
+    lang.prepare(source)
     start = perf_counter()
-    answer = _BY_EXT[ext].run(source)
+    answer = lang.run(source)
     return answer, perf_counter() - start
