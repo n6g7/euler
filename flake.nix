@@ -12,7 +12,7 @@
         default = pkgs.mkShell {
           packages = [
             (pkgs.python3.withPackages (ps: with ps; [
-              green
+              pytest
               flake8
               autopep8
             ]))
