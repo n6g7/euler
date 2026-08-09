@@ -11,7 +11,9 @@ BUILD_DIR = os.path.join(PROJECT_ROOT, 'build')
 
 
 def _exec(cmd, env=None):
-    result = subprocess.run(cmd, capture_output=True, text=True, cwd=PROJECT_ROOT, env=env)
+    result = subprocess.run(
+        cmd, capture_output=True, text=True, cwd=PROJECT_ROOT, env=env
+    )
     if result.returncode != 0:
         raise RuntimeError(result.stderr)
     return result.stdout.strip()
@@ -31,9 +33,14 @@ class CompiledLanguage(Language, ABC):
     def run(self, source: str) -> str:
         name = os.path.splitext(os.path.basename(source))[0]
         binary = os.path.join(BUILD_DIR, name)
-        if not (os.path.exists(binary) and os.path.getmtime(binary) > os.path.getmtime(source)):
+        stale = not os.path.exists(binary) or \
+            os.path.getmtime(binary) <= os.path.getmtime(source)
+        if stale:
             os.makedirs(BUILD_DIR, exist_ok=True)
-            result = subprocess.run(self.compile_cmd(source, binary), capture_output=True, text=True)
+            result = subprocess.run(
+                self.compile_cmd(source, binary),
+                capture_output=True, text=True
+            )
             if result.returncode != 0:
                 raise RuntimeError(f'Compilation failed:\n{result.stderr}')
         return _exec([binary])
@@ -43,7 +50,8 @@ class Python(Language):
     extensions = ('.py',)
 
     def run(self, source: str) -> str:
-        return _exec([sys.executable, source], env={**os.environ, 'PYTHONPATH': PROJECT_ROOT})
+        env = {**os.environ, 'PYTHONPATH': PROJECT_ROOT}
+        return _exec([sys.executable, source], env=env)
 
 
 class Go(CompiledLanguage):
@@ -60,7 +68,11 @@ class Rust(CompiledLanguage):
         return ['rustc', source, '-o', binary]
 
 
-_BY_EXT = {ext: lang() for lang in [Python, Go, Rust] for ext in lang.extensions}
+_BY_EXT = {
+    ext: lang()
+    for lang in [Python, Go, Rust]
+    for ext in lang.extensions
+}
 
 
 def _level(n):

@@ -24,7 +24,8 @@ def _render(problems, results, frame):
         if n in results:
             line = format_line(n, results[n], max_t)
         else:
-            line = f'Problem {n}:'.ljust(11) + f'  {SPINNER[frame % len(SPINNER)]}'
+            spinner = SPINNER[frame % len(SPINNER)]
+            line = f'Problem {n}:'.ljust(11) + f'  {spinner}'
         sys.stdout.write(f'\r{line}\033[K\n')
     sys.stdout.flush()
 
