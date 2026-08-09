@@ -39,3 +39,7 @@ def pandigital_products():
 
 def run():
     return pandigital_products()
+
+
+if __name__ == '__main__':
+    print(run())

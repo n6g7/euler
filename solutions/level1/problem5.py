@@ -21,3 +21,7 @@ def smallest_multiple(n):
 
 def run():
     return smallest_multiple(20)
+
+
+if __name__ == '__main__':
+    print(run())

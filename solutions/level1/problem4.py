@@ -17,3 +17,7 @@ def largest_palindrome_by_magnitude(n):
 
 def run():
     return largest_palindrome_by_magnitude(3)
+
+
+if __name__ == '__main__':
+    print(run())

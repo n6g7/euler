@@ -9,3 +9,7 @@ def distinct_powers(limit):
 
 def run():
     return distinct_powers(100)
+
+
+if __name__ == '__main__':
+    print(run())

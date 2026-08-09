@@ -36,3 +36,7 @@ def quadratic_primes(limit):
 
 def run():
     return quadratic_primes(1000)
+
+
+if __name__ == '__main__':
+    print(run())

@@ -49,3 +49,7 @@ def greatest_diagonal_product(length):
 
 def run():
     return greatest_diagonal_product(4)
+
+
+if __name__ == '__main__':
+    print(run())

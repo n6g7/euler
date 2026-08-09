@@ -7,3 +7,7 @@ def squares_difference(n):
 
 def run():
     return squares_difference(100)
+
+
+if __name__ == '__main__':
+    print(run())

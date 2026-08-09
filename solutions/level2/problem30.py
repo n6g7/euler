@@ -13,3 +13,7 @@ def digit_power(n):
 
 def run():
     return digit_power(5)
+
+
+if __name__ == '__main__':
+    print(run())

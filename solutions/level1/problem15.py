@@ -18,3 +18,7 @@ def lattice_paths(n, m):
 
 def run():
     return lattice_paths(20, 20)
+
+
+if __name__ == '__main__':
+    print(run())

@@ -16,3 +16,7 @@ def sum_even_fibo(max):
 
 def run():
     return sum_even_fibo(4000000)
+
+
+if __name__ == '__main__':
+    print(run())

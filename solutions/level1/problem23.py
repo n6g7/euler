@@ -23,3 +23,7 @@ def non_abundant_sums(limit):
 
 def run():
     return non_abundant_sums(limit)
+
+
+if __name__ == '__main__':
+    print(run())

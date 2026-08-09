@@ -11,3 +11,7 @@ def number_letter_counts(max):
 
 def run():
     return number_letter_counts(1000)
+
+
+if __name__ == '__main__':
+    print(run())

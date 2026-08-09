@@ -8,3 +8,7 @@ def factorial_digit_sum(n):
 
 def run():
     return factorial_digit_sum(100)
+
+
+if __name__ == '__main__':
+    print(run())

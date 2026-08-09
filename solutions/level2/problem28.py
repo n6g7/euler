@@ -8,3 +8,7 @@ def number_spiral_diags(size):
 
 def run():
     return number_spiral_diags(1001)
+
+
+if __name__ == '__main__':
+    print(run())

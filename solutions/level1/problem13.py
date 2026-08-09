@@ -108,3 +108,7 @@ def first_digits_of_sum(digits):
 
 def run():
     return first_digits_of_sum(10)
+
+
+if __name__ == '__main__':
+    print(run())

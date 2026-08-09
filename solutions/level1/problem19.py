@@ -4,3 +4,7 @@ def count_sundays(years):
 
 def run():
     return count_sundays(100)
+
+
+if __name__ == '__main__':
+    print(run())

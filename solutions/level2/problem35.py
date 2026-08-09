@@ -30,3 +30,7 @@ def circular_primes(max):
 
 def run():
     return circular_primes(1000000)
+
+
+if __name__ == '__main__':
+    print(run())

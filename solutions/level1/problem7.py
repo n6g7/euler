@@ -12,3 +12,7 @@ def nth_prime(n):
 
 def run():
     return nth_prime(10001)
+
+
+if __name__ == '__main__':
+    print(run())

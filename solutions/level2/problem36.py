@@ -16,3 +16,7 @@ def double_base_palindromes(max):
 
 def run():
     return double_base_palindromes(1000000)
+
+
+if __name__ == '__main__':
+    print(run())

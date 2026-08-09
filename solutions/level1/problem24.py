@@ -24,3 +24,7 @@ def run():
         [n for n in range(10)],
         999999
     )
+
+
+if __name__ == '__main__':
+    print(run())

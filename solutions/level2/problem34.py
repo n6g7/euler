@@ -20,3 +20,7 @@ def digit_factorials(max):
 
 def run():
     return digit_factorials(100000)
+
+
+if __name__ == '__main__':
+    print(run())

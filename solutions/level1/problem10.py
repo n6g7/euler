@@ -14,3 +14,7 @@ def sum_primes(threshold):
 
 def run():
     return sum_primes(2000000)
+
+
+if __name__ == '__main__':
+    print(run())

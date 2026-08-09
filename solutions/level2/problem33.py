@@ -49,3 +49,7 @@ def curious_fractions(min, max_denominator):
 
 def run():
     return curious_fractions(10, 100)
+
+
+if __name__ == '__main__':
+    print(run())

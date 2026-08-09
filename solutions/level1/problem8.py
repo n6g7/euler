@@ -25,3 +25,7 @@ def greatest_product(digits_length):
 
 def run():
     return greatest_product(13)
+
+
+if __name__ == '__main__':
+    print(run())

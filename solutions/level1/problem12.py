@@ -10,3 +10,7 @@ def triangle_numbers_divisors(number_divisors):
 
 def run():
     return triangle_numbers_divisors(500)
+
+
+if __name__ == '__main__':
+    print(run())

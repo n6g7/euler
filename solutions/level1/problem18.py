@@ -24,3 +24,7 @@ def run():
     ]
 
     return maximum_path_pyramid(pyramid)
+
+
+if __name__ == '__main__':
+    print(run())

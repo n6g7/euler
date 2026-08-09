@@ -13,3 +13,7 @@ def longest_recurring_cycle(limit):
 
 def run():
     return longest_recurring_cycle(1000)
+
+
+if __name__ == '__main__':
+    print(run())

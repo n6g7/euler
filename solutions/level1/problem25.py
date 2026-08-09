@@ -10,3 +10,7 @@ def n_digit_fib(n):
 
 def run():
     return n_digit_fib(1000)
+
+
+if __name__ == '__main__':
+    print(run())

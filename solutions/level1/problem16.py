@@ -7,3 +7,7 @@ def power_digit_sum(n):
 
 def run():
     return power_digit_sum(1000)
+
+
+if __name__ == '__main__':
+    print(run())

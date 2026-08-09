@@ -9,3 +9,7 @@ def brute(sum):
 
 def run():
     return brute(1000)
+
+
+if __name__ == '__main__':
+    print(run())

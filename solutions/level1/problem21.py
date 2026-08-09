@@ -24,3 +24,7 @@ def sum_amicables(max):
 
 def run():
     return sum_amicables(10000)
+
+
+if __name__ == '__main__':
+    print(run())

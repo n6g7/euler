@@ -31,3 +31,7 @@ def truncatable_primes(limit):
 
 def run():
     return truncatable_primes(11)
+
+
+if __name__ == '__main__':
+    print(run())

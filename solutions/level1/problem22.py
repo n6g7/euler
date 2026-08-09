@@ -24,3 +24,7 @@ def names_scores():
 
 def run():
     return names_scores()
+
+
+if __name__ == '__main__':
+    print(run())
