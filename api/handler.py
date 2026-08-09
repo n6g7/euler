@@ -1,17 +1,16 @@
 import json
-from datetime import datetime, timedelta
 
-from cli.run import get_problem
+from cli.run import problem_exists, run_problem
 
 
 def response(status, data):
     return {
-            "statusCode": status,
-            "body": json.dumps(data),
-            "headers": {
-                'Access-Control-Allow-Origin': '*',
-            },
-        }
+        "statusCode": status,
+        "body": json.dumps(data),
+        "headers": {
+            'Access-Control-Allow-Origin': '*',
+        },
+    }
 
 
 def solve(event, context):
@@ -24,20 +23,15 @@ def solve(event, context):
             "error": f'Invalid problem number: "{raw_number}"'
         })
 
-    try:
-        problem = get_problem(number)
-    except ModuleNotFoundError:
+    if not problem_exists(number):
         return response(404, {
             "error": f'No solution for problem {number:d} (yet!)'
         })
 
-    start = datetime.now()
-    solution = problem.run()
-    end = datetime.now()
-    duration = end - start
+    solution, elapsed = run_problem(number)
 
     return response(200, {
         "problem": number,
         "solution": solution,
-        "duration": duration / timedelta(milliseconds=1)
+        "duration": elapsed * 1000
     })
